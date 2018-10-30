@@ -89,6 +89,17 @@ def mineffort2(weights,floors):
 		cumulative_weight+=newItem[1]
 		print(" to bag, G[",i,"] = ",newItem[1])
 	print("Total Effort = "+str(cumulative_weight))
+	
+"""
+Our objective is to minimize the total effort.
+In each floor, the weight of the gold carried to the next floor should be
+minimized.
+Here, the total gold from a floor is first deposited and we are taking two
+packages with minimum weight to take it to the next floor.
+Suppose we are not taking the minimum weight at one floor. Then the excess weight
+we took should be carried atleast until next floor, and again we have to get it to
+the top floor. So the total effort will be more than optimal.
+"""
 
 if __name__=='__main__':
 	n=int(input("Enter number of floors: "))
